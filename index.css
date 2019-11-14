@@ -2,25 +2,19 @@
   display: grid;
 }
 .body-grid{
-  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
   grid-column-gap: 20px;
   margin:10px;
   padding:10px;
 }
-.mid-grid{
 
-}
+/* inner items of main */
 .item{
   height: 0 auto;
   padding: 5px;
   border-radius: 5px;
   text-align: center;
   box-shadow: 2px 1px 5px .6px #c8b1de;
-}
-.mid-item{
-  height: 500px;
-  border: 1px solid #c8b1de;
-  margin: 5px;
 }
 
 .left, .right{
@@ -29,21 +23,28 @@
 }
 
 .left{
-  height: 400px;
+  height: 300px;
 }
 .right{
   height: 700px;
 }
 
+/* inner items of mid */
+.mid-item{
+  height: 500px;
+  border: 1px solid #c8b1de;
+  margin: 5px;
+}
+
 /* MOBILE */
 /*dashboard */
 .dash-left{display:none}
-.dash-mid{grid-column: 1/12;}
+.dash-mid{grid-column: 1/13;}
 .dash-right{display:none}
 
 /*myaccount */
 .acc-left{display:none;}
-.acc-mid{grid-column: 1/12;}
+.acc-mid{grid-column: 1/13;}
 .acc-right{display:none;}
 
 
@@ -52,17 +53,17 @@
 and (min-width: 600px){
   /*dashboard */
   .dash-left{display:none}
-  .dash-mid{grid-column: 1/9;}
+  .dash-mid{grid-column: 1/10;}
   .dash-right{
     display:grid;
-    grid-column:9/12
+    grid-column: 10/13
   }
 
   /*myaccount */
   .acc-left{
     display:grid;
     grid-column: 1/4;}
-  .acc-mid{grid-column: 4/12;}
+  .acc-mid{grid-column: 4/13;}
   .acc-right{display:none;}
 }
 
@@ -81,18 +82,28 @@ and (min-width: 1200px){
 .dash-left{
   display: grid;
   grid-column: 2/4;}
-.dash-mid{grid-column: 4/9;}
-.dash-right{grid-column: 9/11;}
+.dash-mid{grid-column: 4/10;}
+.dash-right{grid-column: 10/12;}
 
 /* desktop myaccount */
 .acc-left{grid-column: 2/4;}
-.acc-mid{grid-column: 4/11;}
+.acc-mid{grid-column: 4/12;}
 .acc-right{display:none;}
 }
 
 /* EXTRA LARGE */
 @media screen
-and (min-width: 1800px ){
+and (min-width: 1250px ){
+  /* desktop dashboard */
+  .dash-left{
+    display: grid;
+    grid-column: 4/5;}
+  .dash-mid{grid-column: 5/8;}
+  .dash-right{grid-column: 8/9;}
+
+  .acc-left{grid-column: 4/5;}
+  .acc-mid{grid-column: 5/9;}
+  .acc-right{display:none;}
 
 }
 
