@@ -1,0 +1,89 @@
+.grid-container{
+  margin:10px;
+  padding:10px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto;
+  grid-column-gap: 20px;
+}
+.item{
+  height: 300px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 2px 1px 5px .6px #c8b1de;
+}
+
+
+/* MOBILE */
+/*dashboard */
+.dash-left{display:none}
+.dash-mid{grid-column: 1/12;}
+.dash-right{display:none}
+
+/*myaccount */
+.acc-left{display:none;}
+.acc-mid{grid-column: 1/12;}
+.acc-right{display:none;}
+
+
+/* TABLET Portrait*/
+@media screen
+and (min-width: 600px){
+  /*dashboard */
+  .dash-left{display:none}
+  .dash-mid{grid-column: 1/9;}
+  .dash-right{
+    display:grid;
+    grid-column:9/12
+  }
+
+  /*myaccount */
+  .acc-left{
+    display:grid;
+    grid-column: 1/4;}
+  .acc-mid{grid-column: 4/12;}
+  .acc-right{display:none;}
+}
+
+/* TABLET Landscape*/
+@media screen
+and (min-width: 900px){
+  /*dashboard */
+  /*myaccount */
+}
+
+
+/* DESKTOP, LAPTOP */
+@media screen
+and (min-width: 1200px){
+/* desktop dashboard */
+.dash-left{
+  display: grid;
+  grid-column: 2/4;}
+.dash-mid{grid-column: 4/9;}
+.dash-right{grid-column: 9/11;}
+
+/* desktop myaccount */
+.acc-left{grid-column: 2/4;}
+.acc-mid{grid-column: 4/11;}
+.acc-right{display:none;}
+}
+
+/* EXTRA LARGE */
+@media screen
+and (min-width: 1800px ){
+
+}
+
+
+
+
+a{
+  text-decoration:none;
+  font-size: 1.2em;
+  padding:10px;
+  margin: 10px;
+}
+a.active{
+  background-color: #c8b1de;
+}
